@@ -1,6 +1,7 @@
 """ base_model The mold(idea) class is the parent class."""
 import uuid
 from datetime import datetime, date
+import models
 
 
 class BaseModel:
@@ -32,6 +33,8 @@ class BaseModel:
     def save(self):
         """update 'updated_at' attribute"""
         self.updated_at = datetime.now()
+        models.storage.new(self)
+        models.storage.save()
 
     def to_dict(self):
         """ to new dict"""
