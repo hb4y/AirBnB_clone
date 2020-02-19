@@ -75,7 +75,7 @@ class HBNBCommand(cmd.Cmd):
             name = str(arg.split()[0]) + "." + str(arg.split()[1])
             for key in dic_all.keys():
                 if key == name:
-                    dic_all.pop(key)
+                    del(dic_all[key])
                     storage.save()
                     return False
             print("** no instance found **")
