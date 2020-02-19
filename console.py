@@ -123,13 +123,14 @@ class HBNBCommand(cmd.Cmd):
                     if key == name:
                         if arg.split()[3].isdecimal():
                             aux_val = int(arg.split()[3])
+                            setattr(dic_all[name], arg.split()[2], aux_val)
                         else:
                             try:
                                 aux_val = float(arg.split()[3])
+                                setattr(dic_all[name], arg.split()[2], aux_val)
                             except ValueError:
                                 aux_val = arg.split()[3]
-
-                        setattr(dic_all[name], arg.split()[2], aux_val)
+                                setattr(dic_all[name], arg.split()[2], aux_val)
                         storage.save()
                         return False
                 print("** no instance found **")
