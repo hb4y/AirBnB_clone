@@ -5,7 +5,7 @@
 from models.base_model import BaseModel
 
 
-class City(BaseModel):
+class Place(BaseModel):
     """
     Define class plece from BaseModel.
     """

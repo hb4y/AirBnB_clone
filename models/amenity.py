@@ -5,7 +5,7 @@
 from models.base_model import BaseModel
 
 
-class amenity(BaseModel):
+class Amenity(BaseModel):
     """
     Define class amenity from BaseModel.
     """
