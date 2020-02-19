@@ -28,6 +28,9 @@ class HBNBCommand(cmd.Cmd):
         pass
 
     def do_create(self, arg):
+        """
+        Create a new obj
+        """
         if not arg:
             print("** class name missing **")
         elif arg and not (arg in classes):
@@ -39,6 +42,9 @@ class HBNBCommand(cmd.Cmd):
             print(obj.id)
 
     def do_show(self, arg):
+        """
+        Show a specific class + instance id
+        """
         if not arg:
             print("** class name is missing **")
         elif not (arg.split()[0] in classes):
@@ -55,6 +61,9 @@ class HBNBCommand(cmd.Cmd):
             print("** no instance found **")
 
     def do_destroy(self, arg):
+        """
+        Destroy an obj with a specific class + instance id
+        """
         if not arg:
             print("** class name is missing **")
         elif not (arg.split()[0] in classes):
@@ -72,6 +81,9 @@ class HBNBCommand(cmd.Cmd):
             print("** no instance found **")
 
     def do_update(self, arg):
+        """
+        Update the obj with: class_name + id + attrib + value
+        """
         if not arg:
             print("** class name is missing **")
         elif not (arg.split()[0] in classes):
@@ -101,6 +113,9 @@ class HBNBCommand(cmd.Cmd):
             print("** no instance found **")
 
     def do_all(self, arg):
+        """
+        Print all obj OR print objs with specific class_name
+        """
         if not arg:
             dic_all = storage.all()
             for key in dic_all.keys():
