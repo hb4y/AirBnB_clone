@@ -12,3 +12,6 @@ class City(BaseModel):
     place_id: ""
     user_id: ""
     text: ""
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(**kwargs)
