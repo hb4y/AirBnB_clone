@@ -1,3 +1,7 @@
+"""
+Class to storage all the obj
+save to a file named 'file.json'
+"""
 import json
 import os
 from models.base_model import BaseModel
@@ -7,10 +11,6 @@ from models.city import City
 from models.amenity import Amenity
 from models.place import Place
 from models.review import Review
-"""
-Class to storage all the obj
-save to a file named 'file.json'
-"""
 
 
 class FileStorage:
