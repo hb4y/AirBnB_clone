@@ -30,10 +30,11 @@ class TestBaseModel(unittest.TestCase):
             Removing the instance.
         """
         del self.base_model
-        
+
     def test_docstring(self):
         """the test that confirms if everyone has docstring"""
-        self.assertIsNotNone(models.base_model.__doc__,"Mod does not docstring")
+        msg = "Mod does not docstring"
+        self.assertIsNotNone(models.base_model.__doc__, msg)
         self.assertIsNotNone(BaseModel.__doc__, "Class does not docstring")
 
     def test_executable_file(self):
