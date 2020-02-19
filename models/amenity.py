@@ -12,4 +12,7 @@ class Amenity(BaseModel):
     name = ""
 
     def __init__(self, **kwargs):
+        """
+        Call super() for BaseModel
+        """
         super().__init__(**kwargs)

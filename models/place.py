@@ -22,4 +22,7 @@ class Place(BaseModel):
     amenity_ids = []
 
     def __init__(self, *args, **kwargs):
+        """
+        Init with super() from parent BaseModel
+        """
         super().__init__(**kwargs)

@@ -14,4 +14,7 @@ class Review(BaseModel):
     text = ""
 
     def __init__(self, *args, **kwargs):
+        """
+        Init with super() from BaseModel
+        """
         super().__init__(**kwargs)

@@ -13,4 +13,7 @@ class City(BaseModel):
     name = ""
 
     def __init__(self, **kwargs):
+        """
+        Init with super() from BaseModel class
+        """
         super().__init__(**kwargs)

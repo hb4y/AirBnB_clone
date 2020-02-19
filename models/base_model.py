@@ -2,13 +2,20 @@
 import uuid
 from datetime import datetime, date
 import models
-
+"""
+Base_model The mold(idea).
+Is the parent class.
+"""
 
 
 class BaseModel:
-    """class initialization"""
+    """
+    class initialization
+    """
     def __init__(self, *args, **kwargs):
-        """ initialization"""
+        """
+        Initialization of the class
+        """
         if kwargs:
             for key, value in kwargs.items():
                 if key == "__class__":
@@ -27,7 +34,9 @@ class BaseModel:
             self.updated_at = datetime.now()
 
     def __str__(self):
-        """should print, and str() should return"""
+        """
+        Should print, and str() should return
+        """
         return ("[{}] ({}) {}".format(self.__class__.__name__,
                 self.id, self.to_dict()))
 

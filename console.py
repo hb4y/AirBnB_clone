@@ -129,7 +129,7 @@ class HBNBCommand(cmd.Cmd):
             for key in dic_all.keys():
                 if key.startswith(arg):
                     print(dic_all[key])
-            return False 
+            return False
 
 if __name__ == '__main__':
     HBNBCommand().cmdloop()
