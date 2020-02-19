@@ -114,20 +114,25 @@ class HBNBCommand(cmd.Cmd):
         else:
             dic_all = storage.all()
             name = str(arg.split()[0]) + "." + str(arg.split()[1])
-            for key in dic_all.keys():
-                if key == name:
-                    if arg.split()[3].isdecimal():
-                        aux_val = int(arg.split()[3])
-                    else:
-                        try:
-                            aux_val = float(arg.split()[3])
-                        except ValueError:
-                            aux_val = arg.split()[3]
+            if arg.split()[0] not in classes:
+                print("** class doesn't exist **")
+            elif name not in dic_all.keys():
+                print("** no instance found **")
+            else:
+                for key in dic_all.keys():
+                    if key == name:
+                        if arg.split()[3].isdecimal():
+                            aux_val = int(arg.split()[3])
+                        else:
+                            try:
+                                aux_val = float(arg.split()[3])
+                            except ValueError:
+                                aux_val = arg.split()[3]
 
-                    setattr(dic_all[name], arg.split()[2], aux_val)
-                    storage.save()
-                    return False
-            print("** no instance found **")
+                        setattr(dic_all[name], arg.split()[2], aux_val)
+                        storage.save()
+                        return False
+                print("** no instance found **")
 
     def do_all(self, arg):
         """
