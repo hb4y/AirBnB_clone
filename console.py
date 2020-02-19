@@ -87,7 +87,15 @@ class HBNBCommand(cmd.Cmd):
             name = str(arg.split()[0]) + "." + str(arg.split()[1])
             for key in dic_all.keys():
                 if key == name:
-                    setattr(dic_all[name], arg.split()[2], arg.split()[3])
+                    if arg.split()[3].isdecimal():
+                        aux_val = int(arg.split()[3])
+                    else:
+                        try:
+                            aux_val = float(arg.split()[3])
+                        except ValueError:
+                            aux_val = arg.split()[3]
+
+                    setattr(dic_all[name], arg.split()[2], aux_val)
                     storage.save()
                     return False
             print("** no instance found **")
