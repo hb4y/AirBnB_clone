@@ -88,14 +88,29 @@ class HBNBCommand(cmd.Cmd):
         """
         if not arg:
             print("** class name is missing **")
-        elif not (arg.split()[0] in classes):
-            print("** class doesn't exist **")
-        elif len(arg.split()) < 2:
-            print("** instance id missing **")
-        elif len(arg.split()) < 3:
-            print("** attribute name missing **")
-        elif len(arg.split()) < 4:
-            print("** value missing **")
+        elif len(arg.split()) == 1:
+            if arg.split()[0] not in classes:
+                print("** class doesn't exist **")
+            else:
+                print("** instance id missing **")
+        elif len(arg.split()) == 2:
+            name = str(arg.split()[0]) + "." + str(arg.split()[1])
+            dic_all = storage.all()
+            if arg.split()[0] not in classes:
+                print("** class doesn't exist **")
+            elif name not in dic_all.keys():
+                print("** no instance found **")
+            else:
+                print("** attribute name missing **")
+        elif len(arg.split()) == 3:
+            name = str(arg.split()[0]) + "." + str(arg.split()[1])
+            dic_all = storage.all()
+            if arg.split()[0] not in classes:
+                print("** class doesn't exist **")
+            elif name not in dic_all.keys():
+                print("** no instance found **")
+            else:
+                print("** value missing **")
         else:
             dic_all = storage.all()
             name = str(arg.split()[0]) + "." + str(arg.split()[1])
