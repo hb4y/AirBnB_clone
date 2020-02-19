@@ -29,7 +29,7 @@ class BaseModel:
     def __str__(self):
         """should print, and str() should return"""
         return ("[{}] ({}) {}".format(self.__class__.__name__,
-                self.id, self.__dict__))
+                self.id, self.to_dict()))
 
     def save(self):
         """update 'updated_at' attribute"""
