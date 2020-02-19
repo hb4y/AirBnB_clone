@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-
+"""
+HBNB Command Line
+"""
 import cmd
 from models.base_model import BaseModel
 from models import classes, storage
