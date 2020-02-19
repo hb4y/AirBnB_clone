@@ -87,14 +87,18 @@ class HBNBCommand(cmd.Cmd):
             name = str(arg.split()[0]) + "." + str(arg.split()[1])
             for key in dic_all.keys():
                 if key == name:
-                    dic_all[arg.split()[2]] = arg.split()[3]
+                    setattr(dic_all[name], arg.split()[2], arg.split()[3])
                     storage.save()
                     return False
             print("** no instance found **")
 
     def do_all(self, arg):
         if not arg:
-            print("** class does't exist **")
+            dic_all = storage.all()
+            for key in dic_all.keys():
+                if key.startswith(arg):
+                    print(dic_all[key])
+            return False
         elif not (arg in classes):
             print("** class does't exist **")
         else:
@@ -102,11 +106,7 @@ class HBNBCommand(cmd.Cmd):
             for key in dic_all.keys():
                 if key.startswith(arg):
                     print(dic_all[key])
-            for item in classes:
-                for key in dic_all.keys():
-                    if key.startswith(arg):
-                        print(dic_all[key])
-
+            return False 
 
 if __name__ == '__main__':
     HBNBCommand().cmdloop()

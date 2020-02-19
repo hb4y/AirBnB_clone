@@ -4,6 +4,7 @@ from datetime import datetime, date
 import models
 
 
+
 class BaseModel:
     """class initialization"""
     def __init__(self, *args, **kwargs):
