@@ -1,0 +1,16 @@
+Traceback (most recent call last):
+  File "/usr/lib/python3.4/runpy.py", line 170, in _run_module_as_main
+    "__main__", mod_spec)
+  File "/usr/lib/python3.4/runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "/usr/lib/python3.4/unittest/__main__.py", line 18, in <module>
+    main(module=None)
+  File "/usr/lib/python3.4/unittest/main.py", line 92, in __init__
+    self.parseArgs(argv)
+  File "/usr/lib/python3.4/unittest/main.py", line 116, in parseArgs
+    self._do_discovery(argv[2:])
+  File "/usr/lib/python3.4/unittest/main.py", line 225, in _do_discovery
+    self.test = loader.discover(self.start, self.pattern, self.top)
+  File "/usr/lib/python3.4/unittest/loader.py", line 261, in discover
+    raise ImportError('Start directory is not importable: %r' % start_dir)
+ImportError: Start directory is not importable: 'tests/test_models'
