@@ -38,14 +38,15 @@ class TestFileStorage(unittest.TestCase):
 
     def test_executable_file(self):
         """test if file has permissions to execute"""
+        path = 'tests/test_models/test_engine/test_file_storage.py'
         # Check if read access
-        is_read_true = os.access('models/base_model.py', os.R_OK)
+        is_read_true = os.access(path, os.R_OK)
         self.assertTrue(is_read_true)
         # Check if write access
-        is_write_true = os.access('models/base_model.py', os.W_OK)
+        is_write_true = os.access(path, os.W_OK)
         self.assertTrue(is_write_true)
         # Check if for execution access
-        is_exec_true = os.access('models/base_model.py', os.X_OK)
+        is_exec_true = os.access(path, os.X_OK)
         self.assertTrue(is_exec_true)
 
     def test_is_an_instance(self):
