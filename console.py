@@ -36,7 +36,7 @@ class HBNBCommand(cmd.Cmd):
         if not arg:
             print("** class name missing **")
         elif arg and not (arg in classes):
-            print("** class name doesn't exist **")
+            print("** class doesn't exist **")
         else:
             create = "{}()".format(arg)
             obj = eval(create)
@@ -48,7 +48,7 @@ class HBNBCommand(cmd.Cmd):
         Show a specific class + instance id
         """
         if not arg:
-            print("** class name is missing **")
+            print("** class name missing **")
         elif len(arg.split()) == 1:
             if arg.split()[0] not in classes:
                 print("** class doesn't exist **")
@@ -69,7 +69,7 @@ class HBNBCommand(cmd.Cmd):
         Destroy an obj with a specific class + instance id
         """
         if not arg:
-            print("** class name is missing **")
+            print("** class name missing **")
         elif not (arg.split()[0] in classes):
             print("** class doesn't exist **")
         elif len(arg.split()) < 2:
@@ -89,7 +89,7 @@ class HBNBCommand(cmd.Cmd):
         Update the obj with: class_name + id + attrib + value
         """
         if not arg:
-            print("** class name is missing **")
+            print("** class name missing **")
         elif len(arg.split()) == 1:
             if arg.split()[0] not in classes:
                 print("** class doesn't exist **")
