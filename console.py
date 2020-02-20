@@ -145,7 +145,7 @@ class HBNBCommand(cmd.Cmd):
             print(all_in)
             return False
         elif not (arg in classes):
-            print("** class does't exist **")
+            print("** class doesn't exist **")
         else:
             dic_all = storage.all()
             all_in = []
