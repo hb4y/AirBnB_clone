@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """ test_amenity test files """
-#imports
+# imports
 from io import StringIO
 import sys
 import os
@@ -8,8 +8,8 @@ import datetime
 import unittest
 import models
 import pep8
-
 from models.amenity import Amenity
+
 
 class TestAmenity(unittest.TestCase):
     """
@@ -52,15 +52,14 @@ class TestAmenity(unittest.TestCase):
     def test_id(self):
         """test if the id of two instances are different"""
         base_model_ = Amenity()
-        base_model_1 =Amenity()
+        base_model_1 = Amenity()
         self.assertNotEqual(base_model_.id, base_model_1.id)
 
     def test_save(self):
         """check if the attribute updated_at (date) is updated for
         the same object with the current date"""
-        base_model_2 =Amenity()
+        base_model_2 = Amenity()
         first_updated = base_model_2.updated_at
         base_model_2.save()
         second_updated = base_model_2.updated_at
         self.assertNotEqual(first_updated, second_updated)
-
