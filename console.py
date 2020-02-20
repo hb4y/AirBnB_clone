@@ -141,17 +141,19 @@ class HBNBCommand(cmd.Cmd):
         """
         if not arg:
             dic_all = storage.all()
-            for key in dic_all.keys():
-                if key.startswith(arg):
-                    print(dic_all[key])
+            all_in = [str(value) for key, value in dic_all.items()]
+            print(all_in)
             return False
         elif not (arg in classes):
             print("** class does't exist **")
         else:
             dic_all = storage.all()
-            for key in dic_all.keys():
-                if key.startswith(arg):
-                    print(dic_all[key])
+            all_in = []
+            for key, value in dic_all.items():
+                if str(key.split('.')[0]) == arg.split()[0]:
+                    all_in.append(str(value))
+            if len(all_in) != 0:
+                print(all_in)
             return False
 
 if __name__ == '__main__':
