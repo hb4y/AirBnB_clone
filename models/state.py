@@ -12,7 +12,7 @@ class State(BaseModel):
     """
     name = ""
 
-    def __init__(self, **kargs):
+    def __init__(self, **kwargs):
         """
         Init with super() from BaseModel
         """
