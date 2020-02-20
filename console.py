@@ -59,11 +59,9 @@ class HBNBCommand(cmd.Cmd):
             name = str(arg.split()[0]) + "." + str(arg.split()[1])
             if arg.split()[0] not in classes:
                 print("** class doesn't exist **")
+            elif name in dic_all:
+                print(dic_all[name])
             else:
-                for key in dic_all.keys():
-                    if key == name:
-                        print(dic_all[key])
-                        return False
                 print("** no instance found **")
 
     def do_destroy(self, arg):
