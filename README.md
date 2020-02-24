@@ -84,7 +84,7 @@ $python3 -m unittest discover tests
 $./console.py
 ```
 ### coding style tests ⌨️
-```
+
 ## Console :space_invader:
 
 ### Usage:
@@ -100,7 +100,6 @@ EOF  all  count  create  destroy  help  quit  show  update
 (hbnb) 
 ```
 Also, it is possible to create a text file with test cases and pipe the content.
-```
 
 ## Files
 
