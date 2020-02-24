@@ -118,10 +118,15 @@ _This program called console.py which contains the entry shell of the AirBnB _
 _This is the console._
 
 **amenity.py**
+
 **city.py**
+
 **user.py**
+
 **place.py**
+
 **review.py**
+
 **state.py**
 
 **file_stroge**
@@ -133,7 +138,7 @@ _this is de serialization for json_
 _This file has the description of the funcions for the git._
 
 ## Class diagram
-![](https://twitter.com/Mari_Pasmin/status/1231968773495808001/photo/1)
+![](https://pbs.twimg.com/media/ERjVD1kXYAE_UO-?format=jpg&name=medium)
 
 
 ## Deployment 📦
