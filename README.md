@@ -113,23 +113,27 @@ This method will be the first part of the serialization/deserialization process:
 
 _This program called console.py which contains the entry shell of the AirBnB _
 
-**_man_1_simple_shell_**
+**console.py**
 
-_This file has the description of the the shell and how it works._
+_This is the console._
+
+**amenity.py**
+**city.py**
+**user.py**
+**place.py**
+**review.py**
+**state.py**
+
+**file_stroge**
+_this is de serialization for json_
+
 
 **_README.md_**
 
 _This file has the description of the funcions for the git._
 
-**_Functions.c_** 
-
-_This  file has the functions that we implement, _strcmp, execute, _path,
-
-       _strdup, _strlen_
-
-       **_Functions2.c_**
-
-       _this file has the description of the funcions  _str‐, cat, _strncmp._
+## Class diagram
+![](https://twitter.com/Mari_Pasmin/status/1231968773495808001/photo/1)
 
 
 ## Deployment 📦
@@ -138,13 +142,13 @@ _This  file has the functions that we implement, _strcmp, execute, _path,
        [HOLBERTON SCHOOL](https://intranet.hbtn.io/concepts/75) -the framework
        ribution 🖇️
 
-       [HOLBERTON SCHOOL](https://intranet.hbtn.io/projects/235)proyect  Wiki  y Style [Wiki](https://github.com/holbertonschool/Betty/wiki)
+
 
 ## Authors ✒️👩🏼‍💻👨🏼‍💻
 
        _creaters AirBnB_Clone project_
 
-       * **Hugo Bayona** - *Initial Work* - - *Twitter*-[@dalmariv01](https://twitter.com/BatmanEsFriki) -*github*- [hb4y](https://github.com/hb4y)
+       * **Hugo Bayona** - *Initial Work* - - *Twitter*-[@BatmanEsFriki](https://twitter.com/BatmanEsFriki) -*github*- [hb4y](https://github.com/hb4y)
        * **Aura Marina Pasmin** - *Initial Work and Documentation* - -*Twitter*- [@MariPasmin](https://twitter.com/Mari_Pasmin) - *github* - [auraPasmin](https://github.com/auraPasmin)
 
 
